@@ -36,16 +36,8 @@ public class Act_Dispatcher extends AppCompatActivity {
 
     @OnClick(R.id.button)
     public void onClick() {
-        Act_DispatcherPermissionsDispatcher.getPhotoWithPermissionCheck(Act_Dispatcher.this);//发起权限申请
-        getPhoto();
-    }
-
-    /**
-     * 需要权限的方法
-     */
-    @NeedsPermission(Manifest.permission.CAMERA)
-    void getPhoto() {
-        Toast.makeText(this, "授权成功", Toast.LENGTH_SHORT).show();
+        Act_DispatcherPermissionsDispatcher.getMultiWithPermissionCheck(Act_Dispatcher.this);//发起权限申请
+//        getPhoto();
     }
 
     //获取多个权限
